@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const DEFAULT_USERNAME = 'admin';
-const DEFAULT_PASSWORD = 'password123';
+const DEFAULT_USERNAME = "admin";
+const DEFAULT_PASSWORD = "password123";
 
-function Login({ setIsAuthenticated }) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+function Login({ setIsAuthenticated, activeLink, setActiveLink }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username === DEFAULT_USERNAME && password === DEFAULT_PASSWORD) {
       setIsAuthenticated(true); // Set authenticated state
-      navigate('/dashboard');
+      setActiveLink("Dashboard");
+      navigate("/dashboard");
     } else {
-      setError('Invalid username or password');
+      setError("Invalid username or password");
     }
   };
 
