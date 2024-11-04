@@ -5,7 +5,7 @@ function Home({ isAuthenticated, setActiveLink }) {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-green-900 to-green-700 text-gray-200 p-8">
+    <div className="w-full h-[calc(100dvh-72px)] md:h-screen flex flex-col justify-center items-center bg-gradient-to-r from-green-900 to-green-700 text-gray-200 p-8 pb-[144px] md:pb-0">
       <h1 className="text-4xl font-bold mb-6 text-center text-green-200">
         Welcome to FarmShield
       </h1>

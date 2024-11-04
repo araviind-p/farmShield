@@ -22,7 +22,7 @@ function Login({ setIsAuthenticated, activeLink, setActiveLink }) {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-800">
+    <div className="flex items-center justify-center h-[calc(100dvh-72px)] md:h-screen bg-gray-800 pb-[48px] md:pb-0">
       <form
         onSubmit={handleSubmit}
         className="bg-white p-6 rounded shadow-md w-80"
